@@ -284,9 +284,9 @@ Resources:
                     apt-get install unzip awscli -y
                     apt-get install apache2 -y
                     systemctl start apache2.service
+                    systemctl enable apache2
                     cd /var/www/html
-                    aws s3 cp s3://udacitydemo1/udagram.zip .
-                    unzip -o udagram.zip
+                    echo "it works! Udagram, Udacity" > index.html .
             ImageId: ami-0729e439b6769d6ab
             KeyName: nd9990_keypair
             IamInstanceProfile: !Ref ProfileWithRolesForOurApp
